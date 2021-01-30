@@ -116,7 +116,8 @@ public class OptionsController : MonoBehaviour
 
     private void PlaySoundButton(AudioSource buttonAudioSource)
     {
-        AudioSource.PlayClipAtPoint(buttonAudioSource.clip, Camera.main.transform.position);
+        buttonAudioSource.Play();
+        //AudioSource.PlayClipAtPoint(buttonAudioSource.clip, Camera.main.transform.position);
     }
 
     #endregion
