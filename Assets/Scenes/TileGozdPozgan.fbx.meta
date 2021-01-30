@@ -3,12 +3,7 @@ guid: 046672aab47c1c349a04bc8d1c5915b7
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pogorel les
-    second: {fileID: 2100000, guid: 537e614a20ad7b446892b1b9418d0046, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
