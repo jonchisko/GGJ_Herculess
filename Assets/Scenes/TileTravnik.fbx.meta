@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 516ff10527d505a4ea026e555bd7f0e0
+guid: 0ee06973d924ff348b9c284cc2d49990
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Trava
-    second: {fileID: 2100000, guid: 8b2b1fab15c53c642a21d725c60d78e9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kamen
-    second: {fileID: 2100000, guid: 26cce97081782aa469dbcb02b6d80e49, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
