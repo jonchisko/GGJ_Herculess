@@ -3,12 +3,7 @@ guid: 442ae8b66531b494089633a47f3c2e18
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Voda
-    second: {fileID: 2100000, guid: 50b6adf7436873141ad2e3ea3d61525c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
