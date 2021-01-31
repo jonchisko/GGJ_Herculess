@@ -6,18 +6,26 @@ public class ObstacleBehaviour : MonoBehaviour
 {
     public ObstacleEffectsSo obstacleEffectData;
     public float reenableColliderTime = 3.0f;
-    private Collider collider;
-    
+    private Collider collider_;
+    private Renderer rendererComponent;
+
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<Collider>();
+        collider_ = GetComponent<Collider>();
+        rendererComponent = GetComponentInChildren<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public Vector3 GetSurfacePosition()
+    {
+        Vector3 tmp = this.transform.position;
+        return new Vector3(tmp.x, tmp.y + rendererComponent.bounds.size.y / 2.0f, tmp.z);
     }
 
     public void ExecuteObstacleEffect(HerculessMover herculess)
@@ -31,15 +39,16 @@ public class ObstacleBehaviour : MonoBehaviour
             obstacleEffectData.RotateHerculessQuaternion = Quaternion.LookRotation(relativeDirection, Vector3.up);
             // TODO:, should be done by coroutine
             // herculess.transform.rotation = Quaternion.LookRotation(relativeDirection, Vector3.up);
+           
         }
-        StartCoroutine(obstacleEffectData.ExecuteObstacleEffect(herculess));
+        StartCoroutine(obstacleEffectData.ExecuteObstacleEffect(this.gameObject, herculess));
     }
 
     IEnumerator RenableColliderAfterTime()
     {
-        collider.enabled = false;
+        collider_.enabled = false;
         yield return new WaitForSeconds(reenableColliderTime);
-        collider.enabled = true;
+        collider_.enabled = true;
     }
     
 }

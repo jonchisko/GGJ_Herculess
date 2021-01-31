@@ -15,3 +15,5 @@ MonoBehaviour:
   rotateHerculess: {x: 0, y: 100, z: 0}
   rotationWeight: -400
   obstacleType: 0
+  ReplaceObject: {fileID: 1705110057101976410, guid: d6793b78922b25e44aed15ecdc996ad4,
+    type: 3}

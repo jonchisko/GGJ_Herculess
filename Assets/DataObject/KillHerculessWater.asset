@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Wine
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeDirectionWineEffect
+  m_Name: KillHerculessWater
+  m_EditorClassIdentifier: Assembly-CSharp::KillHerculessObstacleEffect
   rotateHerculess: {x: 0, y: 0, z: 0}
-  rotationWeight: 100
-  obstacleType: 9
-  ReplaceObject: {fileID: 0}
+  rotationWeight: 0
+  obstacleType: 2
+  ReplaceObject: {fileID: 7015725558131280504, guid: a8a98de6e74335e4784ee1b3cc9e66ed,
+    type: 3}

@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleEffectData: {fileID: 11400000, guid: 55be2a88f254346a7a51d770d795fdad, type: 2}
+  reenableColliderTime: 3
 --- !u!65 &42454060669794449
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
-using Object = UnityEngine.Object;
 
 public class HerculessMover : MonoBehaviour
 {
@@ -46,7 +44,6 @@ public class HerculessMover : MonoBehaviour
         ObstacleBehaviour obstacle = other.gameObject.GetComponent<ObstacleBehaviour>();
         if (obstacle != null)
         {
-            Debug.Log("Hit Obstacle: " + obstacle.name);
             obstacle.ExecuteObstacleEffect(this);
         }
     }

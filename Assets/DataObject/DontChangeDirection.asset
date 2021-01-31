@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DontChangeDirection
   rotateHerculess: {x: 0, y: 0, z: 0}
   rotationWeight: 0
-  obstacleType: 0
+  obstacleType: 4
+  ReplaceObject: {fileID: 0}

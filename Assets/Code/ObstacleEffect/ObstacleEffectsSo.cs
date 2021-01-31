@@ -15,8 +15,11 @@ public abstract class ObstacleEffectsSo : ScriptableObject
 
     public ObstacleType.ObstacleTypes ObstacleType => obstacleType;
 
+    public GameObject ReplaceObject;
+
     private Quaternion rotateHerculessQuaternion;
     
+
     public Vector3 RotateHerculess
     {
         get => rotateHerculess;
@@ -37,14 +40,16 @@ public abstract class ObstacleEffectsSo : ScriptableObject
     
     public float RotationWeight => rotationWeight;
 
-    public abstract IEnumerator ExecuteObstacleEffect(HerculessMover herculess);
+    public virtual IEnumerator ExecuteObstacleEffect(GameObject parent, HerculessMover herculess) {
+        yield return null;
+    }
 
 }
 
 [CreateAssetMenu(menuName = "Herculess/ObstacleEffects/ChangeDirectionHerculess", fileName = "ChangeDirectionObstacleEffect")]
-public class ChangeDirectionObstacleEffect : ObstacleEffectsSo
+class ChangeDirectionObstacleEffect : ObstacleEffectsSo
 {
-    public override IEnumerator ExecuteObstacleEffect(HerculessMover herculess)
+    public override IEnumerator ExecuteObstacleEffect(GameObject parent, HerculessMover herculess)
     {
         Vector3 rotatedFor = Vector3.zero;
         while (Mathf.Abs(rotatedFor.y) < Mathf.Abs(RotateHerculess.y))
@@ -54,13 +59,14 @@ public class ChangeDirectionObstacleEffect : ObstacleEffectsSo
             rotatedFor += rotationVector;
             yield return null;
         }
+        if (ObstacleType == global::ObstacleType.ObstacleTypes.Skeleton) Destroy(parent);
     }
 }
 
 [CreateAssetMenu(menuName = "Herculess/ObstacleEffects/KillHerculess", fileName = "KillHerculessObstacleEffect")]
-public class KillHerculessObstacleEffect : ObstacleEffectsSo
+class KillHerculessObstacleEffect : ObstacleEffectsSo
 {
-    public override IEnumerator ExecuteObstacleEffect(HerculessMover herculess)
+    public override IEnumerator ExecuteObstacleEffect(GameObject parent, HerculessMover herculess)
     {
         // spawn animator and effects n such
         herculess.enabled = false;
@@ -70,31 +76,32 @@ public class KillHerculessObstacleEffect : ObstacleEffectsSo
 }
 
 [CreateAssetMenu(menuName = "Herculess/ObstacleEffects/ChangeDirectionWineHerculess", fileName = "ChangeDirectionObstacleWineEffect")]
-public class ChangeDirectionWineEffect : ObstacleEffectsSo
+class ChangeDirectionWineEffect : ObstacleEffectsSo
 {
-    public override IEnumerator ExecuteObstacleEffect(HerculessMover herculess)
+    public override IEnumerator ExecuteObstacleEffect(GameObject parent, HerculessMover herculess)
     {
         while (!herculess.transform.rotation.Equals(RotateHerculessQuaternion))
         {
             herculess.transform.rotation = Quaternion.Slerp(herculess.transform.rotation, RotateHerculessQuaternion, Time.deltaTime * RotationWeight);
             yield return null;
         }
+        Destroy(parent);
     }
 }
 
 [CreateAssetMenu(menuName = "Herculess/ObstacleEffects/DontChangeDirection", fileName = "DontChangeDirection")]
-public class DontChangeDirection : ObstacleEffectsSo
+class DontChangeDirection : ObstacleEffectsSo
 {
-    public override IEnumerator ExecuteObstacleEffect(HerculessMover herculess)
+    public override IEnumerator ExecuteObstacleEffect(GameObject parent, HerculessMover herculess)
     {
         yield return null;
     }
 }
 
 [CreateAssetMenu(menuName = "Herculess/ObstacleEffects/WinGame", fileName = "WinGameObstacle")]
-public class WinGame : ObstacleEffectsSo
+class WinGame : ObstacleEffectsSo
 {
-    public override IEnumerator ExecuteObstacleEffect(HerculessMover herculess)
+    public override IEnumerator ExecuteObstacleEffect(GameObject parent, HerculessMover herculess)
     {
         herculess.MovementDirection = Vector3.zero;
         herculess.animController.SetBool("IsRunning", false);
