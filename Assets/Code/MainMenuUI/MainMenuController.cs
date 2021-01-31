@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
@@ -60,6 +61,7 @@ public class MainMenuController : MonoBehaviour
         // load cutscene scene
         PlaySoundButton(playButton_.GetComponent<AudioSource>());
         DisableMainMenuUi();
+        SceneManager.LoadSceneAsync(1);
         OnEventPlayPress?.Invoke();
     }
 

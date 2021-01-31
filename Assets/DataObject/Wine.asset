@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Wine
   m_EditorClassIdentifier: Assembly-CSharp::ChangeDirectionWineEffect
   rotateHerculess: {x: 0, y: 0, z: 0}
-  rotationWeight: 100
+  rotationWeight: 0
   obstacleType: 9
   ReplaceObject: {fileID: 0}

@@ -15,17 +15,22 @@ public class FireAbility : MonoBehaviour
     [SerializeField]
     Camera camera;
 
+    public delegate void SelectedAbility(FireAbility fireManager);
+    public static event SelectedAbility OnSelectedAbility;
+
     public GameObject skeletonAbility;
     public GameObject wineAbility;
-
-    private int currentlySelectedAbility = 0;
+    public InventoryManager inventory;
     private Spell[] spells = new Spell[] { Spell.Lightning, Spell.MakeWay, Spell.Skeleton, Spell.Wine };
     private const int MaxAbilities = 4;
     private bool canFire = true;
+
+    public int CurrentlySelectedAbility { get; private set; } = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnSelectedAbility?.Invoke(this);
     }
 
     // Update is called once per frame
@@ -39,12 +44,13 @@ public class FireAbility : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            currentlySelectedAbility += 1;
-            if (currentlySelectedAbility >= MaxAbilities)
+            CurrentlySelectedAbility += 1;
+            if (CurrentlySelectedAbility >= MaxAbilities)
             {
-                currentlySelectedAbility = 0;
+                CurrentlySelectedAbility = 0;
             }
-            Debug.Log("Ability: " + spells[currentlySelectedAbility]);
+            Debug.Log("Ability: " + spells[CurrentlySelectedAbility]);
+            OnSelectedAbility?.Invoke(this);
         }
     }
 
@@ -52,33 +58,36 @@ public class FireAbility : MonoBehaviour
     {
         if (Input.GetAxis("Fire1") > 0 && canFire)
         {
-            StartCoroutine(ReloadTime());
-            RaycastHit hit;
-            if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
+            if (inventory.BuySpell(spells[CurrentlySelectedAbility]))
             {
-                Debug.Log(hit.transform.name);
-                var hitObstacle = hit.transform.GetComponent<ObstacleBehaviour>();
-                var hitObject = hitObstacle?.obstacleEffectData;
-                if (hitObject != null)
+                Debug.Log("BOUGHT " + spells[CurrentlySelectedAbility]);
+                StartCoroutine(ReloadTime());
+                RaycastHit hit;
+                if (Physics.Raycast(camera.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
                 {
-                    if (spells[currentlySelectedAbility] == Spell.Lightning && hitObject.ObstacleType == ObstacleType.ObstacleTypes.Forest
-                        || spells[currentlySelectedAbility] == Spell.MakeWay && hitObject.ObstacleType == ObstacleType.ObstacleTypes.River)
+                    Debug.Log(hit.transform.name);
+                    var hitObstacle = hit.transform.GetComponent<ObstacleBehaviour>();
+                    var hitObject = hitObstacle?.obstacleEffectData;
+                    if (hitObject != null)
                     {
-                        Instantiate(hitObject.ReplaceObject, hit.transform.position, hit.transform.rotation);
-                        hit.transform.gameObject.SetActive(false);
-                    }
+                        if (spells[CurrentlySelectedAbility] == Spell.Lightning && hitObject.ObstacleType == ObstacleType.ObstacleTypes.Forest
+                            || spells[CurrentlySelectedAbility] == Spell.MakeWay && hitObject.ObstacleType == ObstacleType.ObstacleTypes.River)
+                        {
+                            Instantiate(hitObject.ReplaceObject, hit.transform.position, hit.transform.rotation);
+                            hit.transform.gameObject.SetActive(false);
+                        }
 
-                    if (spells[currentlySelectedAbility] == Spell.Skeleton)
-                    {
-                        Instantiate(skeletonAbility, hitObstacle.GetSurfacePosition(), Quaternion.identity);
-                    }
+                        if (spells[CurrentlySelectedAbility] == Spell.Skeleton)
+                        {
+                            Instantiate(skeletonAbility, hitObstacle.GetSurfacePosition(), Quaternion.identity);
+                        }
 
-                    if (spells[currentlySelectedAbility] == Spell.Wine)
-                    {
-                        Instantiate(wineAbility, hitObstacle.GetSurfacePosition(), Quaternion.identity);
+                        if (spells[CurrentlySelectedAbility] == Spell.Wine)
+                        {
+                            Instantiate(wineAbility, hitObstacle.GetSurfacePosition(), Quaternion.identity);
+                        }
                     }
                 }
-
             }
         }
 
@@ -88,6 +97,11 @@ public class FireAbility : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
             canFire = true;
         }
+    }
+
+    public Spell GetCurrentlySelectedSpell()
+    {
+        return spells[CurrentlySelectedAbility];
     }
 
 }

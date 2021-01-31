@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: ChangeDirectionMountain
   m_EditorClassIdentifier: Assembly-CSharp::ChangeDirectionObstacleEffect
-  rotateHerculess: {x: 0, y: 100, z: 0}
+  rotateHerculess: {x: 0, y: 120, z: 0}
   rotationWeight: 400
   obstacleType: 5
+  ReplaceObject: {fileID: 0}

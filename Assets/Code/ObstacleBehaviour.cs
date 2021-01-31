@@ -37,8 +37,6 @@ public class ObstacleBehaviour : MonoBehaviour
             Vector3 relativeDirection = this.transform.position - herculess.transform.position;
             relativeDirection = new Vector3(relativeDirection.x, 0.0f, relativeDirection.z);
             obstacleEffectData.RotateHerculessQuaternion = Quaternion.LookRotation(relativeDirection, Vector3.up);
-            // TODO:, should be done by coroutine
-            // herculess.transform.rotation = Quaternion.LookRotation(relativeDirection, Vector3.up);
            
         }
         StartCoroutine(obstacleEffectData.ExecuteObstacleEffect(this.gameObject, herculess));

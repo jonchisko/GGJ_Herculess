@@ -4,6 +4,10 @@ using UnityEngine;
 
 public abstract class ObstacleEffectsSo : ScriptableObject
 {
+    public delegate void HerculessDeath();
+    public static HerculessDeath OnHerculessDeath;
+    public static HerculessDeath OnHerculessWin;
+
     [SerializeField] 
     private Vector3 rotateHerculess;
 
@@ -71,6 +75,7 @@ class KillHerculessObstacleEffect : ObstacleEffectsSo
         // spawn animator and effects n such
         herculess.enabled = false;
         yield return new WaitForSeconds(0.2f);
+        OnHerculessDeath?.Invoke();
         Destroy(herculess.gameObject);
     }
 }
@@ -106,6 +111,7 @@ class WinGame : ObstacleEffectsSo
         herculess.MovementDirection = Vector3.zero;
         herculess.animController.SetBool("IsRunning", false);
         herculess.GetComponent<BoxCollider>().enabled = false;
+        OnHerculessWin?.Invoke();
         yield return null;
     }
 }
