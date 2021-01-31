@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: 95c842a392c78834c943a1c407bdb9e2
+guid: e0f0247501ebcc34aaf48d1029ebf12c
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Iglice1
-    second: {fileID: 2100000, guid: 138b35dd321622a4d93635b532ae8b8e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Iglice2
-    second: {instanceID: 0}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Les1
-    second: {instanceID: 0}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Les2
-    second: {instanceID: 0}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Tla
-    second: {instanceID: 0}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

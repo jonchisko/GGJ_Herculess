@@ -3,12 +3,7 @@ guid: 3fdd64d9ddc6c9447b6bca8957d3884b
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Gora
-    second: {fileID: 2100000, guid: b483a0f320d243c4db2c4410dfd8e7a8, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
