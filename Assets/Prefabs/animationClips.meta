@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/animationClips.meta
 guid: b9428bb57096041cc92a7eb4068769b8
+=======
+guid: 8b117c706668c43419cbe42744a73e66
+>>>>>>> 757bc163bb7ec20d54e0876a9a71374ebbeaa917:Assets/Animations/Transition.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

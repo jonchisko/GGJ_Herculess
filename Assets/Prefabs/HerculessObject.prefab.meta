@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/HerculessObject.prefab.meta
 guid: ffb88313aa3664cb790c9f4f28e69422
 PrefabImporter:
+=======
+guid: 5ce3be504f0fdc8429736a70dbdb7394
+folderAsset: yes
+DefaultImporter:
+>>>>>>> 757bc163bb7ec20d54e0876a9a71374ebbeaa917:Assets/Images.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
