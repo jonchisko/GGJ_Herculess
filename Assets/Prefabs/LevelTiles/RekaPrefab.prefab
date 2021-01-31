@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2990247426697274495}
   - component: {fileID: 8982310171052150823}
+  - component: {fileID: -4544764217329924371}
+  - component: {fileID: -3127805536052157761}
   m_Layer: 0
   m_Name: RekaPrefab
   m_TagString: Untagged
@@ -47,7 +49,34 @@ MonoBehaviour:
   type: {fileID: 0}
   hasUnit: 0
   isRange: 0
+  isGoalTile: 0
   placedUnitRef: {fileID: 0}
+--- !u!114 &-4544764217329924371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013640935252519320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ef7324488e840bb9e9800b959f9cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleEffectData: {fileID: 11400000, guid: 86446a9c87f644d4db6963dbb44f9aec, type: 2}
+--- !u!65 &-3127805536052157761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013640935252519320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &8461873527314205363
 PrefabInstance:
   m_ObjectHideFlags: 0

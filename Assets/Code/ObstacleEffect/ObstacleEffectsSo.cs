@@ -64,7 +64,7 @@ public class KillHerculessObstacleEffect : ObstacleEffectsSo
     {
         // spawn animator and effects n such
         herculess.enabled = false;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(herculess.gameObject);
     }
 }
@@ -79,5 +79,26 @@ public class ChangeDirectionWineEffect : ObstacleEffectsSo
             herculess.transform.rotation = Quaternion.Slerp(herculess.transform.rotation, RotateHerculessQuaternion, Time.deltaTime * RotationWeight);
             yield return null;
         }
+    }
+}
+
+[CreateAssetMenu(menuName = "Herculess/ObstacleEffects/DontChangeDirection", fileName = "DontChangeDirection")]
+public class DontChangeDirection : ObstacleEffectsSo
+{
+    public override IEnumerator ExecuteObstacleEffect(HerculessMover herculess)
+    {
+        yield return null;
+    }
+}
+
+[CreateAssetMenu(menuName = "Herculess/ObstacleEffects/WinGame", fileName = "WinGameObstacle")]
+public class WinGame : ObstacleEffectsSo
+{
+    public override IEnumerator ExecuteObstacleEffect(HerculessMover herculess)
+    {
+        herculess.MovementDirection = Vector3.zero;
+        herculess.animController.SetBool("IsRunning", false);
+        herculess.GetComponent<BoxCollider>().enabled = false;
+        yield return null;
     }
 }

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: KillHerculessObstacleEffect
-  m_EditorClassIdentifier: Assembly-CSharp::KillHerculessObstacleEffect
-  rotateHerculess: {x: 0, y: 0, z: 0}
-  rotationWeight: 0
+  m_Name: Skeleton
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeDirectionObstacleEffect
+  rotateHerculess: {x: 0, y: 135, z: 0}
+  rotationWeight: 400
   obstacleType: 0

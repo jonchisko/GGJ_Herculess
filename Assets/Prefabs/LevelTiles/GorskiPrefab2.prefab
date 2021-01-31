@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1204656278932656937}
   - component: {fileID: 9157388870938072915}
+  - component: {fileID: -576721028400751598}
+  - component: {fileID: 483771548713438486}
   m_Layer: 0
   m_Name: GorskiPrefab2
   m_TagString: Untagged
@@ -47,7 +49,34 @@ MonoBehaviour:
   type: {fileID: 0}
   hasUnit: 0
   isRange: 0
+  isGoalTile: 0
   placedUnitRef: {fileID: 0}
+--- !u!114 &-576721028400751598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207587423276330397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ef7324488e840bb9e9800b959f9cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleEffectData: {fileID: 11400000, guid: 55be2a88f254346a7a51d770d795fdad, type: 2}
+--- !u!65 &483771548713438486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207587423276330397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &4066697062353833250
 PrefabInstance:
   m_ObjectHideFlags: 0

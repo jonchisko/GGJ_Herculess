@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
+using Object = UnityEngine.Object;
 
 public class HerculessMover : MonoBehaviour
 {
     public delegate void MoveFinished(HerculessMover a);
-    public MoveFinished OnMoveFinished;
+
+    public Animator animController;
     
     [SerializeField] 
     private float speed = 5.0f;
@@ -24,6 +26,7 @@ public class HerculessMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animController.SetBool("IsRunning", true);
         movementDirection = Vector3.forward;
     }
 
@@ -43,6 +46,7 @@ public class HerculessMover : MonoBehaviour
         ObstacleBehaviour obstacle = other.gameObject.GetComponent<ObstacleBehaviour>();
         if (obstacle != null)
         {
+            Debug.Log("Hit Obstacle: " + obstacle.name);
             obstacle.ExecuteObstacleEffect(this);
         }
     }

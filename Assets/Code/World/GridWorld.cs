@@ -109,16 +109,6 @@ public class GridWorld : MonoBehaviour
         return xDim * indy + indx;
     }
 
-    private void OnEnable()
-    {
-        herculess.OnMoveFinished += OnMoveCommandFinished;
-    }
-
-    private void OnDisable()
-    {
-        herculess.OnMoveFinished -= OnMoveCommandFinished;
-    }
-    
     #region Simulate Code
 
     private void SimulateHerculess(int startX, int startY)

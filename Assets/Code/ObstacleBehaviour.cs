@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleBehaviour : MonoBehaviour
 {
     public ObstacleEffectsSo obstacleEffectData;
-
+    public float reenableColliderTime = 3.0f;
     private Collider collider;
     
     // Start is called before the first frame update
@@ -22,13 +22,12 @@ public class ObstacleBehaviour : MonoBehaviour
 
     public void ExecuteObstacleEffect(HerculessMover herculess)
     {
-        collider.enabled = false;
+        StartCoroutine(RenableColliderAfterTime());
         var wineEffect = obstacleEffectData as ChangeDirectionWineEffect;
         if (wineEffect != null)
         {
             Vector3 relativeDirection = this.transform.position - herculess.transform.position;
             relativeDirection = new Vector3(relativeDirection.x, 0.0f, relativeDirection.z);
-            Vector3 tmpEuler = herculess.transform.rotation.eulerAngles - Quaternion.LookRotation(relativeDirection, Vector3.up).eulerAngles;
             obstacleEffectData.RotateHerculessQuaternion = Quaternion.LookRotation(relativeDirection, Vector3.up);
             // TODO:, should be done by coroutine
             // herculess.transform.rotation = Quaternion.LookRotation(relativeDirection, Vector3.up);
@@ -36,4 +35,11 @@ public class ObstacleBehaviour : MonoBehaviour
         StartCoroutine(obstacleEffectData.ExecuteObstacleEffect(herculess));
     }
 
+    IEnumerator RenableColliderAfterTime()
+    {
+        collider.enabled = false;
+        yield return new WaitForSeconds(reenableColliderTime);
+        collider.enabled = true;
+    }
+    
 }

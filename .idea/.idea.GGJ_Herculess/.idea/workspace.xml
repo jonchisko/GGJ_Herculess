@@ -20,12 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3607313a-4bb3-4a5d-b816-83e4e874039f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_Herculess/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ_Herculess/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ_Herculess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ_Herculess/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddonPackages/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/LowPoly - Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddonPackages/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/LowPoly - Grass.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/TileBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/TileBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Herculess/HerculessMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Herculess/HerculessMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ObstacleBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ObstacleBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ObstacleEffect/ObstacleEffectsSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ObstacleEffect/ObstacleEffectsSo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/World/GridWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/World/GridWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jon/TestLevelScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jon/TestLevelScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DataObject/ChangeDirectionSkeleton.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DataObject/ChangeDirectionSkeleton.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DataObject/KillHerculessObstacleEffect.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DataObject/KillHerculessObstacleEffect.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/Herculess.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/Herculess.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GorskiPrefab1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GorskiPrefab1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GorskiPrefab2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GorskiPrefab2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GozdPozganPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GozdPozganPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GozdPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/GozdPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/MysticPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/MysticPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/PrepadPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/PrepadPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/RekaPosusenaPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/RekaPosusenaPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/RekaPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/RekaPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/Tiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/Tiles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/TravnikPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelTiles/TravnikPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jaka/Herculess Karakter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jaka/Herculess Karakter.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jon/LevelScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jon/LevelScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jon/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jon/MainMenuScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Shaders.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +68,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Code/TileTypes.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/TileBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/World/GridWorld.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/ObstacleType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/World/GridWorld.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Herculess/HerculessMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/ObstacleBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/ObstacleEffect/ObstacleEffectsSo.cs" />
@@ -98,7 +117,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612011563763</updated>
-      <workItem from="1612011572607" duration="31441000" />
+      <workItem from="1612011572607" duration="34528000" />
     </task>
     <servers />
   </component>
