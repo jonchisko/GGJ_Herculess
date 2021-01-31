@@ -9,6 +9,7 @@ public class TileBehaviour : MonoBehaviour
     public TileTypes type;
     public bool hasUnit;
     public bool isRange;
+    public bool isGoalTile;
     public GameObject placedUnitRef;
 
     private Renderer renderer;
