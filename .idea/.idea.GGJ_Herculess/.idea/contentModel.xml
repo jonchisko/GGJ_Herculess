@@ -140,11 +140,19 @@
           </e>
         </e>
         <e p="Code" t="Include">
+          <e p="Herculess" t="Include">
+            <e p="HerculessMover.cs" t="Include" />
+          </e>
           <e p="MainMenuUI" t="Include">
             <e p="ControlsController.cs" t="Include" />
             <e p="MainMenuController.cs" t="Include" />
             <e p="OptionsController.cs" t="Include" />
           </e>
+          <e p="ObstacleBehaviour.cs" t="Include" />
+          <e p="ObstacleEffect" t="Include">
+            <e p="ObstacleEffectsSo.cs" t="Include" />
+          </e>
+          <e p="ObstacleType.cs" t="Include" />
           <e p="SaveLoad" t="Include">
             <e p="PlayerPrefsLoader.cs" t="Include" />
           </e>
